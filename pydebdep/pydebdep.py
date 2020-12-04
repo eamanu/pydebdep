@@ -15,7 +15,7 @@ class PyDebDep:
     def _get_missings(debian_packages, dependencies):
         missing_list = list()
         for dep in dependencies:
-            if not dep['name'] in debian_packages:
+            if f'python3-{dep["name"]}' not in debian_packages:
                 missing_list.append(dep)
 
         return missing_list

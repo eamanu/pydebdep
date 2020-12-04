@@ -8,7 +8,7 @@ class Packager:
         cache = self._get_cache_updated()
         # ACcording to documetation we need to open cache
         cache.open(None)
-        packages = [p['name'] for p in cache]
+        packages = [p.name for p in cache]
         return packages
 
     @staticmethod
